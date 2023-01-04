@@ -1,10 +1,13 @@
 {
-  "orgName": "dhoechst Company",
+  "orgName": "Arketek",
   "edition": "Developer",
-  "features": [],
+  "features": ["EnableSetPasswordInApi"],
   "settings": {
-    "orgPreferenceSettings": {
-      "s1DesktopEnabled": true
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
     }
   }
 }

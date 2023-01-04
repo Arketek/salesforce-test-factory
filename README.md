@@ -1,26 +1,19 @@
-Salesforce-Test-Factory
-=======================
+# Salesforce DX Project: Next Steps
 
-SObject factory that can be used in unit tests to create test data.
+Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
-Install as an unlocked package: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2G000000Y19lQAC
+## How Do You Plan to Deploy Your Changes?
 
-Usage:
+Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
-    // The TestFactory will pre-fill all the fields we typically need
-    Account a = (Account)TestFactory.createSObject(new Account());
-    insert a;
-    
-    // You can also set values to be used. Any values set in the constructor will override the defaults
-    Opportunity o = (Opportunity)TestFactory.createSObject(new Opportunity(AccountId = a.Id));
-    
-    // You can also specify a specific set of overrides for different scenarios
-    Account a = (Account)TestFactory.createSObject(new Account(), 'AccountDefaults');
-    
-    // Finally, get a bunch of records for testing bulk
-    Account[] aList = (Account[])TestFactory.createSObjectList(new Account(), 200);
+## Configure Your Salesforce DX Project
 
-    // You can optionally insert records as created like this:
-    // Note the final parameter of true.
-    Account a = (Account) TestFactory.createSObject(new Account(), true);
-	Contact c = (Contact) TestFactory.createSObject(new Contact(AccountID = a.Id), true);
+The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+
+## Read All About It
+
+- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- [Forked from dhoechst](https://github.com/dhoechst/Salesforce-Test-Factory)

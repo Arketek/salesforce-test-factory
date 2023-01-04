@@ -1,3 +1,8 @@
+#Salesforce-Test-Factory
+SObject factory that can be used in unit tests to create test data.
+
+Install as an unlocked package: https://login.salesforce.com/packaging/installPackage.apexp?p0=0Ho1U0000008Of4SAE
+
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.

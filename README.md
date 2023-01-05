@@ -1,7 +1,7 @@
 #Salesforce-Test-Factory
 SObject factory that can be used in unit tests to create test data.
 
-Install as an unlocked package: https://login.salesforce.com/packaging/installPackage.apexp?p0=0Ho1U0000008Of4SAE
+Install as an unlocked package: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1U000007ofO6QAI
 
 # Salesforce DX Project: Next Steps
 

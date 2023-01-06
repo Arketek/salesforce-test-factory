@@ -10,8 +10,8 @@
         {
             "path": "mdapi-source",
             "package": "test-factory",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionName": "ver 1.1",
+            "versionNumber": "1.0.0.NEXT",
             "default": false,
             "versionDescription": "Daniel Hoechst's test factory. Used to make test data more easily."
         }
@@ -20,7 +20,7 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "55.0",
     "packageAliases": {
-        "test-factory": "0Ho1U0000008OgHSAU",
-        "test-factory@0.1.0-1": "04t1U000007ofO6QAI"
+        "Test Factory": "0Ho1U0000008OgWSAU",
+        "Test Factory@0.1.0-1": "04t1U000007ofOVQAY"
     }
 }

@@ -1,7 +1,7 @@
 #Salesforce-Test-Factory
 SObject factory that can be used in unit tests to create test data.
 
-Installation URL: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1U000007ofOVQAY
+Installation URL: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1U000007ofOkQAI
 
 # Salesforce DX Project: Next Steps
 

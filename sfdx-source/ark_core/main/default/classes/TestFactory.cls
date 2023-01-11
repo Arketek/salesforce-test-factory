@@ -1,7 +1,7 @@
 @isTest
-public class TestFactory {
+global class TestFactory {
 
-	public static SObject createSObject(SObject sObj) {
+	global static SObject createSObject(SObject sObj) {
 		// Check what type of object we are creating and add any defaults that are needed.
 		String objectName = String.valueOf(sObj.getSObjectType());
 		// Construct the default values class. Salesforce doesn't allow '__' in class names
@@ -13,7 +13,7 @@ public class TestFactory {
 		return sObj;
 	}
 
-	public static SObject createSObject(SObject sObj, Boolean doInsert) {
+	global static SObject createSObject(SObject sObj, Boolean doInsert) {
 		SObject retObject = createSObject(sObj);
 		if (doInsert) {
 			insert retObject;
@@ -21,7 +21,7 @@ public class TestFactory {
 		return retObject;
 	}
 
-	public static SObject createSObject(SObject sObj, String defaultClassName) {
+	global static SObject createSObject(SObject sObj, String defaultClassName) {
 		// Create an instance of the defaults class so we can get the Map of field defaults
 		Type t = Type.forName(defaultClassName);
 		if (t == null) {
@@ -32,7 +32,7 @@ public class TestFactory {
 		return sObj;
 	}
 
-	public static SObject createSObject(SObject sObj, String defaultClassName, Boolean doInsert) {
+	global static SObject createSObject(SObject sObj, String defaultClassName, Boolean doInsert) {
 		SObject retObject = createSObject(sObj, defaultClassName);
 		if (doInsert) {
 			insert retObject;
@@ -40,11 +40,11 @@ public class TestFactory {
 		return retObject;
 	}
 
-	public static SObject[] createSObjectList(Sobject sObj, Integer numberOfObjects) {
+	global static SObject[] createSObjectList(Sobject sObj, Integer numberOfObjects) {
 		return createSObjectList(sObj, numberOfObjects, (String)null);
 	}
 
-	public static SObject[] createSObjectList(SObject sObj, Integer numberOfObjects, Boolean doInsert) {
+	global static SObject[] createSObjectList(SObject sObj, Integer numberOfObjects, Boolean doInsert) {
 		SObject[] retList = createSObjectList(sObj, numberOfObjects, (String)null);
 		if (doInsert) {
 			insert retList;
@@ -52,7 +52,7 @@ public class TestFactory {
 		return retList;
 	}
 
-	public static SObject[] createSObjectList(SObject sObj, Integer numberOfObjects, String defaultClassName, Boolean doInsert) {
+	global static SObject[] createSObjectList(SObject sObj, Integer numberOfObjects, String defaultClassName, Boolean doInsert) {
 		SObject[] retList = createSObjectList(sObj, numberOfObjects, defaultClassName);
 		if (doInsert) {
 			insert retList;
@@ -60,7 +60,7 @@ public class TestFactory {
 		return retList;
 	}
 
-	public static SObject[] createSObjectList(Sobject sObj, Integer numberOfObjects, String defaultClassName) {
+	global static SObject[] createSObjectList(Sobject sObj, Integer numberOfObjects, String defaultClassName) {
 		SObject[] sObjs = new SObject[] {};
 		SObject newObj;
 
@@ -106,10 +106,10 @@ public class TestFactory {
 		Case.sObjectType => Case.CaseNumber //this is the autonumber field
 	};
 
-	public class TestFactoryException extends Exception {}
+	global class TestFactoryException extends Exception {}
 
 	// Use the FieldDefaults interface to set up values you want to default in for all objects.
-	public interface FieldDefaults {
+	global interface FieldDefaults {
 		Map<Schema.SObjectField, Object> getFieldDefaults();
 	}
 }
